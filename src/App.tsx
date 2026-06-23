@@ -39,11 +39,14 @@ function getHolidays(year) {
 }
 
 const SOLARBYTE_LOGO = () => (
-  <svg width="130" height="44" viewBox="0 0 130 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="30" fontFamily="'Arial Black', 'Arial', sans-serif" fontWeight="900" fontSize="26" fill="#F8FAFC" letterSpacing="-0.5">SOLAR</text>
-    <text x="72" y="30" fontFamily="'Arial', sans-serif" fontWeight="400" fontSize="22" fill="#F8FAFC">Byte</text>
-    <path d="M 8 36 Q 65 58 118 36" stroke="#F59E0B" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-  </svg>
+  <div style={{ position: "relative", display: "inline-block", paddingBottom: 8 }}>
+    <div style={{ fontSize: 26, fontWeight: 900, letterSpacing: "-0.5px", lineHeight: 1, color: "#F8FAFC" }}>
+      SOLAR<span style={{ fontWeight: 400, fontSize: 22 }}>Byte</span>
+    </div>
+    <svg style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }} height="10" viewBox="0 0 120 10">
+      <path d="M 4 8 Q 60 0 116 8" stroke="#F59E0B" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    </svg>
+  </div>
 );
 
 function formatDate(iso) {
